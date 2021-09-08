@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    <bean id="city" class="com.codingfuture.City"/>-->
+   <!-- <bean id="city2" class="com.codingfuture.TestBeanFactory" factory-method="getCity"/>
+
+    <bean id="cityFactory" class="com.codingfuture.TestBeanFactory"/>
+    <bean id="city3" factory-bean="cityFactory" factory-method="getTestBean"/>-->
+    <!--bean属性注入-->
+    <bean id="city1" class="com.codingfuture.City">
+        <constructor-arg name="name" value="大连"/>
+    </bean>
+    <bean id="city2" class="com.codingfuture.City">
+        <property name="name" value="上海"/>
+    </bean>
+</beans>
