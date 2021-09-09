@@ -14,4 +14,20 @@
     <bean id="city2" class="com.codingfuture.City">
         <property name="name" value="上海"/>
     </bean>
+<!--setter注入   -->
+    <bean id="person" class="com.codingfuture.Person">
+<!--        <property name="city" ref="city1"></property>-->
+        <property name="city">
+            <bean class="com.codingfuture.City">
+                <property name="name" value="深圳"></property>
+            </bean>
+        </property>
+    </bean>
+    <bean id="person1" class="com.codingfuture.Person">
+        <property name="map">
+            <map>
+                <entry key="name" value="张三"/>
+            </map>
+        </property>
+    </bean>
 </beans>
